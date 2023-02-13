@@ -44,4 +44,5 @@ console.log(album6);
 let album7 = new addToCollection('Sing the Dancing 20s', 'The Andrews Sisiters', 1958);
 console.log(album7);
 
-
+//After all are added, console.log collection array
+console.log(collection);
