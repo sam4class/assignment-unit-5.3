@@ -24,7 +24,7 @@ let album = new addToCollection('Coconut Oil', 'Lizzo', 2016);
 console.log(album);
 //console.log(collection.push(album));
 
-let album2 = new addToCollection('Blood on the Tracks', 'Bob Dylam', 1975);
+let album2 = new addToCollection('Blood on the Tracks', 'Bob Dylan', 1975);
 console.log(album2);
 //console.log(collection.push(album2));
 
@@ -34,7 +34,7 @@ let album4 = new addToCollection('Fontanelle', 'Babes In Toyland', 1992);
 console.log(album4);
 let album5 = new addToCollection('Ipecac Neat', 'P.O.S', 2004);
 console.log(album5);
-let album6 = new addToCollection('Sing the Dancing 20s', 'The Andrews Sisiters', 1958);
+let album6 = new addToCollection('Blonde on Blonde', 'Bob Dylan', 1966);
 console.log(album6);
 
 //After all are added, console.log collection array
@@ -55,7 +55,7 @@ function showCollection(array) {
 console.log(showCollection(collection));
 
 //Add a function named findByArtist
-//let foundArtist = collection.filter(findByArtist);
+
 let foundArtist = [];
 
 function findByArtist(){
@@ -68,3 +68,27 @@ function findByArtist(){
 //Testing code
 console.log(findByArtist(collection));
 console.log(foundArtist);
+
+
+// *********STRETCH GOALS*********
+
+function search(artist, yearPublished){
+    //this.artist = artist;
+    //this.year = year;
+    for(let i =0; i<collection.length; i++){
+        let listArtist = collection[i].artist;
+        let listYear = collection[i].yearPublished;
+        console.log({listArtist, listYear});
+        if(listArtist[i] && listYear[i]){
+            console.log({artist, yearPublished});
+            break;
+        }else if (listArtist[i] || listYear[i] === undefined){
+            console.log(collection);
+            break;
+        }else{
+            return [];
+        }
+    }
+}
+//console.log(search('Prince', 1984));
+console.log(search('Lizzo'));
