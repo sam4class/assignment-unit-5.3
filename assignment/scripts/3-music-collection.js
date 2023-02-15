@@ -1,9 +1,9 @@
 console.log('***** Music Collection *****')
 
 let collection = [];
-let getAlbumInfo;
 
-let album1 ={
+
+let album1 = {
     'title': 'Purple Rain',
     'artist': 'Prince',
     'yearPublished': 1984
@@ -13,11 +13,11 @@ collection.push(album1);
 console.log(collection);
 
 
-function addToCollection(title, artist, yearPublished){
+function addToCollection(title, artist, yearPublished) {
     this.title = title;
     this.artist = artist;
     this.yearPublished = yearPublished;
-       collection.push({title, artist, yearPublished});
+    collection.push({ title, artist, yearPublished });
 }
 
 let album = new addToCollection('Coconut Oil', 'Lizzo', 2016);
@@ -42,47 +42,29 @@ console.log(collection);
 
 //Adding showCollection function
 
-function showCollection(array){
+function showCollection(array) {
     console.log(array.length);
-    for(let i=0; i<array.length; i++){
-       let arr = array[i].title;
-       let arr1 = array[i].artist;
-       let arr2 = array[i].yearPublished;
-    console.log(arr + ' by ' + arr1 + ' published in ' + arr2);
-    }
+    for (let i = 0; i < array.length; i++) {
+        let arr = array[i].title;
+        let arr1 = array[i].artist;
+        let arr2 = array[i].yearPublished;
+        console.log(arr + ' by ' + arr1 + ' published in ' + arr2);
+    } return true;
 }
+//Testing function
 console.log(showCollection(collection));
 
-//for (let variable in object) {
-    // code to be executed
-  //}
+//Add a function named findByArtist
+//let foundArtist = collection.filter(findByArtist);
+let foundArtist = [];
 
-//function showCollection(array){
-  //  console.log(array.length);
-    //array.forEach(addToCollection);
-    //console.log(title + ' by ' + artist + ' published in '+yearPublished);
-//}
-
-//function showCollection(array){
-  //  console.log(array.length);
-    //let index = 0;
-	//while (index<array.length){
-    //console.log(array[title] + ' by ' + array[artist] + ' published in '+array[yearPublished]);
-    //console.log(title + ' by ' + artist + ' published in '+yearPublished);
-    //index++
- //}
-//}
-
-//array.forEach(addToCollectoin(array)){
-  //  console.log(title + ' by ' + artist + ' published in '+yearPublished);
-//}
-
-//function showCollection(array){
-  //  console.log(array.length);
-    //for(i=0; i<array.length; i++){
-      //  array.forEach(addToCollection);
-        //console.log(title + ' by ' + artist + ' published in '+yearPublished);
-    //}
-//}
-//console.log(showCollection(collection));
-//array.forEach(addToCollection);
+function findByArtist(){
+    for(let i =0; i<collection.length; i++){
+    let allArtist = collection[i].artist;
+    console.log(allArtist);
+    foundArtist.push(allArtist);
+}
+}
+//Testing code
+console.log(findByArtist(collection));
+console.log(foundArtist);
