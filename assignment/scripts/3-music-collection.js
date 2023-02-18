@@ -18,26 +18,23 @@ function addToCollection(title, artist, yearPublished) {
     this.artist = artist;
     this.yearPublished = yearPublished;
     collection.push({ title, artist, yearPublished });
-    // let noDups = [...new Set(title, artist)];
-    //return collection;
+    return {title, artist, yearPublished};
 }
 
-let album = new addToCollection('Coconut Oil', 'Lizzo', 2016);
-console.log(album);
-//console.log(collection.push(album));
+console.log(addToCollection('Coconut Oil', 'Lizzo', 2016));
+console.log(collection);
 
-let album2 = new addToCollection('Blood on the Tracks', 'Bob Dylan', 1975);
-console.log(album2);
-//console.log(collection.push(album2));
+console.log(addToCollection('Blood on the Tracks', 'Bob Dylan', 1975));
+console.log(collection);
 
-let album3 = new addToCollection('The Jets', 'The Jets', 1985);
-console.log(album3);
-let album4 = new addToCollection('Fontanelle', 'Babes In Toyland', 1992);
-console.log(album4);
-let album5 = new addToCollection('Ipecac Neat', 'P.O.S', 2004);
-console.log(album5);
-let album6 = new addToCollection('Blonde on Blonde', 'Bob Dylan', 1966);
-console.log(album6);
+
+console.log(addToCollection('The Jets', 'The Jets', 1985));
+
+console.log(addToCollection('Fontanelle', 'Babes In Toyland', 1992));
+
+console.log(addToCollection('Ipecac Neat', 'P.O.S', 2004));
+
+console.log(addToCollection('Blonde on Blonde', 'Bob Dylan', 1966));
 
 //After all are added, console.log collection array
 console.log(collection);
@@ -163,4 +160,4 @@ function search2(artist, yearPublished, tracks){
     }
 }
 console.log(search2('Lizzo', 2016, ['Good As Hell: 2:39']));
-console.log(search2('JazzHands', ['Shake em']));
+//console.log(search2('JazzHands', ['Shake em']));
