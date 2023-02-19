@@ -72,13 +72,15 @@ function findByArtist(artist){
 }return foundArtist;
 }
 console.log(foundArtist);
-console.log(findByArtist('Lizzo'));
+//console.log(findByArtist('Lizzo'));
 //console.log(findByArtist('JazzHands'));
 console.log(findByArtist('Bob Dylan'));
 
 
 
 // *********STRETCH GOALS*********
+//I didn't finish
+//The last one's are not working, but I gave it a shot
 
 //Create a search function:
 
