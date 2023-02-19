@@ -55,7 +55,6 @@ console.log(showCollection(collection));
 
 //Add a function named findByArtist
 
-//let foundArtist = [];
 let foundArtist = [];
 
 function findByArtist(artist){
@@ -73,7 +72,7 @@ function findByArtist(artist){
 }return foundArtist;
 }
 console.log(foundArtist);
-//console.log(findByArtist('Lizzo'));
+console.log(findByArtist('Lizzo'));
 //console.log(findByArtist('JazzHands'));
 console.log(findByArtist('Bob Dylan'));
 
